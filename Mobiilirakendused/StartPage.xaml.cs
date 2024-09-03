@@ -2,8 +2,6 @@
 {  
     public partial class StartPage : ContentPage
     {
-        //InitializeComponent();
-
 
         Editor editor;
         Button Button_tagasi, Button_edasi, Button_algus;
@@ -17,7 +15,8 @@
         List<ContentPage> leht = new List<ContentPage>() { new TextPage() };
 
         public StartPage(List<string> tekseId)
-        {
+        {           
+
             vsl = new VerticalStackLayout{BackgroundColor = Color.FromRgb(10, 23, 11)};
             for (int i = 0; i < tekseId.Count; i++)
             {

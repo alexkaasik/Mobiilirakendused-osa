@@ -59,7 +59,6 @@
 	<ItemGroup>
 	  <MauiXaml Remove="StartPage.xaml" />
 	  <MauiXaml Remove="TextPage.xaml" />
-	  <MauiXaml Remove="Valgusfoor.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -69,15 +68,18 @@
 	  <EmbeddedResource Include="TextPage.xaml">
 	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Include="Valgusfoor.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
