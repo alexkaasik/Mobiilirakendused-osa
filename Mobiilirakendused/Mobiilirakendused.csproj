@@ -83,6 +83,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Frame_Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="RBG_Cube.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
