@@ -5,8 +5,8 @@
 		
 		ScrollView sv;
 		VerticalStackLayout vst;
-		public List<ContentPage> page = new List<ContentPage>() { new Valgusfoor()};
-		public List<string> text = new List<string> { "Valgusfoor" };
+		public List<ContentPage> page = new List<ContentPage>() { new Valgusfoor(), new RBG_Cube() };
+		public List<string> text = new List<string> { "Valgusfoor", "RBG_Cube" };
 
 		public StartPage()
 		{
