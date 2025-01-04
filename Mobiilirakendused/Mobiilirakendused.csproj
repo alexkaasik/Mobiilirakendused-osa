@@ -77,22 +77,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Valgusfoor.xaml.cs">
+	  <Compile Update="Valgusfoor\Valgusfoor.xaml.cs">
 	    <DependentUpon>Valgusfoor.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Frame_Page.xaml">
+	  <MauiXaml Update="Frame_Page\Frame_Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RBG_Cube.xaml">
+	  <MauiXaml Update="RGB mudeli\RBG_Cube.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Trips.xaml">
+	  <MauiXaml Update="Trips Traps Trull\Trips.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Valgusfoor.xaml">
+	  <MauiXaml Update="Valgusfoor\Valgusfoor.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
