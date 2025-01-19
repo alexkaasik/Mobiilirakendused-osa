@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobiilirakendused.EditContactPage"
+             Title="EditContactPage">
+    <VerticalStackLayout Padding="20" Spacing="8">
+        <Label
+            Text="Name:" 
+            FontSize="20"
+        />
+        <Entry 
+            x:Name="nameEntry"
+            Placeholder="Enter Fullname"
+            Text="{Binding Name}"
+        />
+
+        <Label
+            Text="Photo:"
+            FontSize="20"
+        />
+        <Image
+            x:Name="ContactPhoto"
+            Source="{Binding Photo}"
+            HeightRequest="100"
+            WidthRequest="100"
+        />
+        <Button 
+            Text="Upload a photo" 
+            Clicked="OnAddPhotoClicked" 
+            FontSize="20"
+        />
+
+        <Label 
+            Text="Email:"
+            FontSize="20"
+        />
+        <Entry 
+            x:Name="emailEntry" 
+            Placeholder="Enter E-mail address"
+            Text="{Binding Email}"
+            Keyboard="Email"
+        />
+
+        <Label
+            Text="Phone:"
+            FontSize="20"
+        />
+        <Entry 
+            x:Name="phoneEntry"
+            Placeholder="Enter phone number"
+            Text="{Binding Phone}" 
+            Keyboard="Telephone"
+        />
+
+        <Label
+            Text="Description:"
+            FontSize="20"
+        />
+        <Editor 
+            x:Name="descriptionEditor"
+            Placeholder="Enter description"
+            Text="{Binding Description}"
+        />
+
+        <Button
+            Text="Save"
+            Clicked="OnSaveClicked"
+            FontSize="20"
+        />
+    </VerticalStackLayout>
+</ContentPage>

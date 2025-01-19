@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobiilirakendused.ContactsPage"
+             Title="ContactsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add a contact" Clicked="OnAddContactClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <TableView Intent="Form" HasUnevenRows="True">
+        <TableRoot>
+            <TableSection Title="Contacts" x:Name="ContactGridLayout">
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

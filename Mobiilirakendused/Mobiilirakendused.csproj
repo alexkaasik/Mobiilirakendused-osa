@@ -83,6 +83,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<MauiXaml Update="Kontaktandmed\EditContactPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Kontaktandmed\Kontaktandmed.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	  <MauiXaml Update="Frame_Page\Frame_Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
