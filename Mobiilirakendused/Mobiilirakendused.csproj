@@ -80,6 +80,9 @@
 	  <Compile Update="Valgusfoor\Valgusfoor.xaml.cs">
 	    <DependentUpon>Valgusfoor.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Võõrkeelt\ShowTable.xaml.cs">
+	    <DependentUpon>ShowTable.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -99,6 +102,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Valgusfoor\Valgusfoor.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Võõrkeelt\EditWordList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Võõrkeelt\ShowTable.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
