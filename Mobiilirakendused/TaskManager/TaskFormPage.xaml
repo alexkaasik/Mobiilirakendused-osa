@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobiilirakendused.TaskFormPage"
+             Title="TaskFormPage">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Entry Placeholder="Task Title" Text="{Binding Title}" />
+        <Editor Placeholder="Description" Text="{Binding Desciption}" />
+
+        <DatePicker Date="{Binding TaskDate, StringFormat='{0:yyyy/MM/dd HH:mm}'}" />
+
+        <HorizontalStackLayout>
+            <Label Text="Task" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding IsTask, Mode=TwoWay}" />
+            <Label Text="Event" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+
+            <Border Stroke="Black" StrokeThickness="2" Padding="12" HorizontalOptions="StartAndExpand">
+                <HorizontalStackLayout >
+                    <Label Text="Start Time:" VerticalOptions="Center"></Label>
+                    <TimePicker
+                        Time="{Binding StartTime}"
+                        Format="HH:mm"
+                    
+                    />
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border Stroke="Black" StrokeThickness="2" Padding="12" IsVisible="{Binding IsTask}"  HorizontalOptions="StartAndExpand">
+                <HorizontalStackLayout>
+                    <Label Text="End Time:" VerticalOptions="Center"></Label>
+                    <TimePicker
+                        Time="{Binding EndTime}"
+                        Format="HH:mm"
+                    
+                    />
+                </HorizontalStackLayout>
+            </Border>
+        </HorizontalStackLayout>
+        <Button Text="Save" Clicked="SaveTask_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

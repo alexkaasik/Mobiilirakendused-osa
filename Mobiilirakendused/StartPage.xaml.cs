@@ -1,12 +1,13 @@
-﻿namespace Mobiilirakendused
+﻿
+namespace Mobiilirakendused
 {
 	public partial class StartPage : ContentPage
 	{
-		
-		ScrollView sv;
-		VerticalStackLayout vst;
-		public List<ContentPage> page = new List<ContentPage>() { new Valgusfoor(), new RBG_Cube(), new Frame_Page(), new Trips(), new Kontaktandmed(), new WordList()};
-		public List<string> text = new List<string> { "Valgusfoor", "RBG_Cube", "Frame_Page", "Trips traps", "Kontaktandmed", "ANKI clone" };
+        ScrollView sv;
+        VerticalStackLayout vst;
+
+        public List<ContentPage> page = new List<ContentPage>() { new Valgusfoor(), new RBG_Cube(), new Frame_Page(), new Trips(), new Kontaktandmed(), new WordList(), new TaskManager()};
+		public List<string> text = new List<string> { "Valgusfoor", "RBG_Cube", "Frame_Page", "Trips traps", "Kontaktandmed", "ANKI clone", "TaskManger" };
 
 		public StartPage()
 		{

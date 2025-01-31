@@ -1,0 +1,56 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Mobiilirakendused.TaskManager"
+    Title="Task Manager">
+
+    <VerticalStackLayout>
+
+        <Button Text="Add Task" Clicked="AddTask_Clicked"/>
+
+
+        <ScrollView>
+
+            <CollectionView
+                x:Name="TaskManagerView"
+                SelectionMode="Single"
+                SelectionChanged="TaskManagerView_SelectionChanged"
+                HorizontalOptions="FillAndExpand">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Padding="10" Opacity="{Binding TaskOpacity}">
+                            <Border Stroke="Black" StrokeThickness="2">
+                                <CheckBox Scale="2.5" IsChecked="{Binding IsCompleted}" CheckedChanged="CheckBox_CheckedChanged"></CheckBox>
+                            </Border>
+
+                            <VerticalStackLayout WidthRequest="260">
+
+                                <Border Stroke="Black" StrokeThickness="2">
+                                    <Label Text="{Binding Title}" VerticalOptions="Center" FontSize="24"/>
+
+                                </Border>
+
+                                <Border Stroke="Black" StrokeThickness="2" Padding="5">
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding TaskDate, StringFormat='{0:dd/MM/yyyy}'}" VerticalOptions="Center" />
+
+                                        <HorizontalStackLayout>
+                                            <Label Text="{Binding StartTime, StringFormat='{0:hh\\:mm}'}" VerticalOptions="Center" />
+                                            <Label Text="-" IsVisible="{Binding IsTask}" VerticalOptions="Center" />
+                                            <Label Text="{Binding EndTime, StringFormat='{0:hh\\:mm}'}" IsVisible="{Binding IsTask}" VerticalOptions="Center" />
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Border>
+
+                            </VerticalStackLayout>
+
+                            <Button Text="🗑" BackgroundColor="Red" TextColor="White" Clicked="DeleteTask_Clicked" CommandParameter="{Binding}" WidthRequest="80" FontSize="44"/>
+
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
