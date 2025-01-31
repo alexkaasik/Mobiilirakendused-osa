@@ -24,8 +24,9 @@ public partial class TaskFormPage : ContentPage
 
         if (!newTask.IsTask) { newTask.EndTime = newTask.StartTime; }
 
-
+        // Deletes if task saved date, is longer than day
         if (newTask.StartTime > newTask.EndTime) { await DisplayAlert("Invalid Time", "Start Time cannot be later than End Time.", "OK"); }
+        // Set task to complete if in the same day and currenty time has surpassed save EndTime.
         else if (newTask.Title == null) { await DisplayAlert("Invalid title", "You can't have an empty title.", "OK"); }
 
         else

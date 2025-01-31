@@ -21,12 +21,15 @@ namespace Mobiilirakendused
             LoadTasks();
         }
 
+        // Refreshes the page when rending it
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             await LoadTasks();
         }
 
+
+        // Shows all task to page.
         private async Task LoadTasks()
         {
             var tasksList = await _database.GetTasksAsync();
@@ -74,7 +77,7 @@ namespace Mobiilirakendused
         }
 
 
-
+        // Background scheduler task
         public async Task StartBackgroundTask()
         {
             while (true)
@@ -91,19 +94,19 @@ namespace Mobiilirakendused
             var tasks = await _database.GetTasksAsync();
             foreach (var task in tasks)
             {
-                if (task.TaskDate.AddDays(1) < DateTime.Now)
+                // Deletes if task saved date, is longer than day
+                if (task.TaskDate < DateTime.Now)
                 {
                     await _database.DeleteTaskAsync(task);
                     continue;
                 }
+                // Set task to complete if in the same day and currenty time has surpassed save EndTime.
                 if (task.TaskDate.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy") && DateTime.Now.TimeOfDay > task.EndTime)
                 {
+
                     task.IsCompleted = true;
                     await _database.SaveTaskAsync(task);
-                }
-
-
-                
+                }                
             }
             await LoadTasks();
         }

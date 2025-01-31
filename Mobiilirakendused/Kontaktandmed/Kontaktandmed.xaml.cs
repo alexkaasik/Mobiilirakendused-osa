@@ -4,12 +4,15 @@ namespace Mobiilirakendused
 { 
     public partial class Kontaktandmed : ContentPage
     {
+        // Why using ObservableCollection?
+        // Because it dynamically saves and easily syncs with all Contact list variable.
         public ObservableCollection<Contact> Contacts { get; set; }
 
         public Kontaktandmed()
         {
             InitializeComponent();
 
+            // Creating contact demo.
             Contacts = new ObservableCollection<Contact>
             {
                 new Contact { Name = "Example", Photo = "default.png", Email = "example@example.com",Phone = "123456789", Description="Test test hello world" }

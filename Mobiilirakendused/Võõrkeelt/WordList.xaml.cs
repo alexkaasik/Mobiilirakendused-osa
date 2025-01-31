@@ -172,6 +172,7 @@ public partial class WordList : ContentPage
         WordsLable();
     }
 
+    // Function to refresh current listed word and it's explanation
     private void WordsLable()
     {
         WordLabel.Text = WordInfo[Possition].Word;
@@ -218,7 +219,7 @@ public partial class WordList : ContentPage
         if (result) 
         {
             SaveWordListToFile();
-            WordsLable(); // Refresh the displayed data
+            WordsLable();
         }
     }
 

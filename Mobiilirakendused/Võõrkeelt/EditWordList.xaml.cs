@@ -5,7 +5,11 @@ namespace Mobiilirakendused;
 
 public partial class EditWordList : ContentPage
 {
-
+    /*
+     * 
+     * Editing page for word
+     * 
+     */
     private WordDictionary _WordDictionary;
     private ObservableCollection<WordDictionary> _WordDictionarys;
     private bool _IsNewWord;

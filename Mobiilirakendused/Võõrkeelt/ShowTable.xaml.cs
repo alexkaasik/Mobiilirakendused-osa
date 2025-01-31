@@ -5,6 +5,7 @@ public partial class ShowTable : ContentPage
     public ShowTable(string answer)
     {
         //InitializeComponent();
+        // Shows translation of the currenctly selected word.
 
         Button PopupFrame = new Button
         {

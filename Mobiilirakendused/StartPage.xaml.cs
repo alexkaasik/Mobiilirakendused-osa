@@ -7,7 +7,7 @@ namespace Mobiilirakendused
         VerticalStackLayout vst;
 
         public List<ContentPage> page = new List<ContentPage>() { new Valgusfoor(), new RBG_Cube(), new Frame_Page(), new Trips(), new Kontaktandmed(), new WordList(), new TaskManager()};
-		public List<string> text = new List<string> { "Valgusfoor", "RBG_Cube", "Frame_Page", "Trips traps", "Kontaktandmed", "ANKI clone", "TaskManger" };
+		public List<string> text = new List<string> { "Valgusfoor", "RBG_Cube", "Frame_Page", "Trips traps", "Sobrade kontaktandmed - 30.09.2024", "Õpime võõrkeelt - 14.10.2024", "Oma projekt - 28.10.2024" };
 
 		public StartPage()
 		{

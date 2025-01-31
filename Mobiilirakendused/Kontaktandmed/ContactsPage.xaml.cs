@@ -34,11 +34,12 @@ namespace Mobiilirakendused
                     },
                     ColumnDefinitions =
                     {
-                        new ColumnDefinition { Width = GridLength.Auto },  // For Image
-                        new ColumnDefinition { Width = GridLength.Star }  // Lables
+                        new ColumnDefinition { Width = GridLength.Auto },  // Column for images
+                        new ColumnDefinition { Width = GridLength.Star }  // Column for lables
                     }
                 };
 
+                // Inserting data into labels
                 var ImageControl = new Image
                 {
                     Source = contact.Photo,
@@ -77,6 +78,8 @@ namespace Mobiilirakendused
                     LineBreakMode = LineBreakMode.WordWrap
                 };
 
+
+                // Setting up layout for Contact Page
                 grid.Children.Add(ImageControl);
                 Grid.SetRowSpan(ImageControl, 4);
                 Grid.SetColumn(ImageControl, 0);
